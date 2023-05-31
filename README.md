@@ -8,15 +8,17 @@ This research is focused on discovering and detecting diachronic semantic shifts
 We apply the indicated models to the News corpus and to the Social media corpus in order to reveal social, political, cultural, etc. changes through semantic changes that are assessed as the similarity (namely, cosine similarity) between embeddings of a word in different time slices (from 2000 to 2019 and from 2007 to 2019 correspondingly).<br>
 <br>
 We analyze the revealed changes and compare performance of the models on two tasks: 1) discovering semantic shifts and 2) detecting known shifts.<br>
-<br>
 
 ## Goal
 The main goal of this research is to discover semantic shifts in the Russian language that happened in the first 20 years of the 21th century using news and social media data and compare different approaches (static, dynamic and contextualized) in revealing them.<br>
 
 ## Data
-The repository data contains news and social media datasets divided per year. The whole datasets are too large for uploading them to Github and can be found here: News corpus and Social media corpus.<br>
+The repository data contains news and social media datasets divided per year. The whole datasets are too large for uploading them to Github and can be found here: 
+<a href:"https://drive.google.com/file/d/1_lzshaBJ7Klm_7p1Mysg5uk_ovQB0IF9/view?usp=drive_link">News corpus</a> and 
+<a href:"https://drive.google.com/file/d/1nMPewEakzH_y80quUGVmRktz0Twcepf1/view?usp=drive_link">Social media corpus</a>.<br>
 <br>
-The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (SGNS, Dynamic word embeddings model and BERT). The trained models for each task can be found here.<br>
+The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (SGNS, Dynamic word embeddings model and BERT). The trained models for each task can be found 
+<a href:"https://drive.google.com/drive/folders/1RED1Qq5VH92WR-E0hNgy5Hox6YaJogRT?usp=drive_link">here</a>.<br>
 
 ## Experimental setup
 We conduct two types of experiments: 1) discovering semantic shifts (for all the chosen models and for both datasets) and 2) classification task on detecting known shifts (for all the chosen models, but only for the News corpus). In the first task we aim at revealing semantic changes from the data and in the second task we analyze how well models can detect semantic shifts with the use of an annotated dataset.<br>
