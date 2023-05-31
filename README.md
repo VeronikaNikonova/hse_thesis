@@ -13,7 +13,7 @@ We analyze the revealed changes and compare performance of the models on two tas
 The main goal of this research is to discover semantic shifts in the Russian language that happened in the first 20 years of the 21th century using news and social media data and compare different approaches (static, dynamic and contextualized) in revealing them.<br>
 
 ## Data
-The repository data contains news and social media datasets divided per year. The whole datasets are too large for uploading them to Github and can be found here: 
+The repository data contains news and social media datasets separated by year. The whole datasets are too large for uploading them to Github and can be found here: 
 [News corpus](https://drive.google.com/file/d/1_lzshaBJ7Klm_7p1Mysg5uk_ovQB0IF9/view?usp=drive_link) and 
 [Social media corpus](https://drive.google.com/file/d/1nMPewEakzH_y80quUGVmRktz0Twcepf1/view?usp=drive_link)<br>
 <br>
