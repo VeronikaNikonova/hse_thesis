@@ -10,16 +10,17 @@ We apply the indicated models to the News corpus and to the Social media corpus 
 We analyze the revealed changes and compare performance of the models on two tasks: 1) discovering semantic shifts and 2) detecting known shifts.<br>
 <br>
 
+## Goal
+The main goal of this research is to discover semantic shifts in the Russian language that happened in the first 20 years of the 21th century using news and social media data and compare different approaches (static, dynamic and contextualized) in revealing them.<br>
+
+## Data
 The repository data contains news and social media datasets divided per year. The whole datasets are too large for uploading them to Github and can be found here: News corpus and Social media corpus.<br>
 <br>
 The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (SGNS, Dynamic word embeddings model and BERT). The trained models for each task can be found here.<br>
 
-## Goal
-The main goal of this research is to discover semantic shifts in the Russian language that happened in the first 20 years of the 21th century using news and social media data and compare different approaches (static, dynamic and contextualized) in revealing them.<br>
-
 ## Experimental setup
 We conduct two types of experiments: 1) discovering semantic shifts (for all the chosen models and for both datasets) and 2) classification task on detecting known shifts (for all the chosen models, but only for the News corpus). In the first task we aim at revealing semantic changes from the data and in the second task we analyze how well models can detect semantic shifts with the use of an annotated dataset.<br>
-<br>
+
 #### For discovering semantic shifts task we use the following Pipeline:
 <ol>
 <li> Train (of fine-tune) embeddings model on our data. </li>
@@ -27,7 +28,8 @@ We conduct two types of experiments: 1) discovering semantic shifts (for all the
 <li> Calculate the cosine similarity measure for each of the eligible words (occurrence at least 50 times for the News corpus and 10 times for the Social media corpus and present in the corresponding time periods) for word embeddings of 2000 and 2019 years (for BERT we use word prototype embeddings: averaged embeddings of all the occurrences of the eligible words in the appropriate year). </li>
 <li> Obtain top 20 words with the lowest cosine similarity between these time periods (meaning that the semantic shift for these words in the time period is the highest). </li>
 <li> Analyze the revealed semantic shifts in terms of their validity and actuality: for each of the words we find the closest neighbors in order to understand the context in which they are used in each period and make the decision on presence/ absence of semantic shift.</li>
-</ol><br>
+</ol>
+
 #### For classification task the Pipeline is the following: 
 <ol>
 <li> Take embedding models from the previous task, retrain them if necessary. </li>
