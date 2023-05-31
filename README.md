@@ -20,8 +20,6 @@ The repository data contains news and social media datasets divided per year. Th
 The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (SGNS, Dynamic word embeddings model and BERT). The trained models for each task can be found 
 [here](https://drive.google.com/drive/folders/1RED1Qq5VH92WR-E0hNgy5Hox6YaJogRT?usp=drive_link).<br>
 
-This site was built using [GitHub Pages](https://pages.github.com/).
-
 ## Experimental setup
 We conduct two types of experiments: 1) discovering semantic shifts (for all the chosen models and for both datasets) and 2) classification task on detecting known shifts (for all the chosen models, but only for the News corpus). In the first task we aim at revealing semantic changes from the data and in the second task we analyze how well models can detect semantic shifts with the use of an annotated dataset.<br>
 
