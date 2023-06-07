@@ -5,7 +5,7 @@ This research is focused on discovering and detecting diachronic semantic shifts
   <li>static approach (Skip-gram with negative sampling model [4]),</li>
   <li>dynamic approach (Dynamic word embeddings model [6]) and </li> 
   <li>contextualized approach (BERT model [1]).</li></l> <br>
-We use [ruBert-base](https://huggingface.co/ai-forever/ruBert-base) version of the BERT model.<br>
+<p>We use [ruBert-base](https://huggingface.co/ai-forever/ruBert-base) version of the BERT model.</p><br>
 We apply the indicated models to the News corpus and to the Social media corpus in order to reveal social, political, cultural, etc. changes through semantic changes that are assessed as the similarity (namely, cosine similarity) between embeddings of a word in different time slices (from 2000 to 2019 and from 2007 to 2019 correspondingly).<br>
 <br>
 We analyze the revealed changes and compare performance of the models on two tasks: 1) discovering semantic shifts and 2) detecting known shifts.<br>
@@ -21,7 +21,9 @@ The repository data contains news and social media datasets separated by year. T
 [Social media corpus](https://drive.google.com/file/d/1nMPewEakzH_y80quUGVmRktz0Twcepf1/view?usp=drive_link)<br>
 <br>
 The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (SGNS, Dynamic word embeddings model and BERT). <br>
-Here you can find the trained models for each task. For the News corpus:
+
+## Models
+Here you can find the trained (or fine-tuned) models for each task. For the News corpus:
 [SGNS](https://drive.google.com/drive/folders/1IZ6GIDcCvmix7dLZRZHQ4SkjxxSPwfbC?usp=sharing),
 [Dynamic word embeddings model](https://drive.google.com/drive/folders/1KAkuRNKFN40FE6CIRQlwKp8WLYRY3JwR?usp=sharing),
 [BERT](https://drive.google.com/drive/folders/1NfuobbC-wFUZmonvmwSZF1F-8tCElQ-L?usp=sharing).
