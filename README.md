@@ -4,7 +4,7 @@ This research is focused on discovering and detecting diachronic semantic shifts
 <l>
   <li>static approach (Skip-gram with negative sampling model [4]),</li>
   <li>dynamic approach (Dynamic word embeddings model [6]) and </li> 
-  <li>contextualized approach (BERT model [1], [ruBert-base](https://huggingface.co/ai-forever/ruBert-base)).</li></l> <br>
+  <li>contextualized approach (BERT model [1], [ruBert-base](https://huggingface.co/ai-forever/ruBert-base) ).</li></l> <br>
 We apply the indicated models to the News corpus and to the Social media corpus in order to reveal social, political, cultural, etc. changes through semantic changes that are assessed as the similarity (namely, cosine similarity) between embeddings of a word in different time slices (from 2000 to 2019 and from 2007 to 2019 correspondingly).<br>
 <br>
 We analyze the revealed changes and compare performance of the models on two tasks: 1) discovering semantic shifts and 2) detecting known shifts.<br>
@@ -21,7 +21,7 @@ The repository notebooks contains Colab notebooks with code and results of our w
 <l>For the News corpus:
   <li>[SGNS](https://drive.google.com/drive/folders/1IZ6GIDcCvmix7dLZRZHQ4SkjxxSPwfbC?usp=sharing),</li>
   <li>[Dynamic word embeddings model](https://drive.google.com/drive/folders/1KAkuRNKFN40FE6CIRQlwKp8WLYRY3JwR?usp=sharing),</li> 
-  <li>[BERT](https://drive.google.com/drive/folders/1NfuobbC-wFUZmonvmwSZF1F-8tCElQ-L?usp=sharing)).</li></l>
+  <li>[BERT](https://drive.google.com/drive/folders/1NfuobbC-wFUZmonvmwSZF1F-8tCElQ-L?usp=sharing).</li></l>
  <l>For the Socia media corpus:
   <li>[SGNS](https://drive.google.com/drive/folders/1IvE7_Met67r2A8oRUB02XNPV_ZeoIch9?usp=sharing),</li>
   <li>[Dynamic word embeddings model](https://drive.google.com/drive/folders/1ZGR3B4Dca7USzsg9vFoqHIkQQDuzQBdK?usp=sharing),</li> 
@@ -57,10 +57,13 @@ The comparison of the performance of the three models on semantic shifts discove
 
 ## References
 [1] [Devlin, J.; Chang, M.-W.; Lee, K.; Toutanova, K: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, 2018.](https://arxiv.org/abs/1810.04805) <br>
-[2] [Fomin, V., Bakshandaeva, D., Rodina, J., Kutuzov, A.: Tracing cultural diachronic semantic shifts in Russian using word embeddings: test sets and baselines. Komp’yuternaya Lingvistika i Intellektual’nye Tekhnologii: Dialog conference, 2019. 203–218 pp.](https://arxiv.org/abs/1905.06837) [Datasets](https://github.com/wadimiusz/diachrony_for_russian)<br>
+[2] [Fomin, V., Bakshandaeva, D., Rodina, J., Kutuzov, A.: Tracing cultural diachronic semantic shifts in Russian using word embeddings: test sets and baselines. Komp’yuternaya Lingvistika i Intellektual’nye Tekhnologii: Dialog conference, 2019. 203–218 pp.](https://arxiv.org/abs/1905.06837)<br>
+[Datasets](https://github.com/wadimiusz/diachrony_for_russian)<br>
 [3] [Martinc, M., Montariol, S., Zosa, E., Pivovarova, L.: Discovery Team at SemEval-2020 Task 1: Context-sensitive Embeddings not Always Better Than Static for Semantic Change Detection. Proceedings of the Fourteenth Workshop on Semantic Evaluation, 2020.](https://paperswithcode.com/paper/discovery-team-at-semeval-2020-task-1-context) <br>
-[4] [Mikolov, T., Sutskever, I., Chen, K., Corrado, G., Dean, J.: Distributed representations of words and phrases and their compositionality. Advances in Neural Information Processing Systems. 26, 2013.](https://arxiv.org/abs/1310.4546) [Code](https://code.google.com/archive/p/word2vec/)
+[4] [Mikolov, T., Sutskever, I., Chen, K., Corrado, G., Dean, J.: Distributed representations of words and phrases and their compositionality. Advances in Neural Information Processing Systems. 26, 2013.](https://arxiv.org/abs/1310.4546) <br>
+[Code](https://code.google.com/archive/p/word2vec/)<br>
 [5] [Montariol, S.: Models of diachronic semantic change using word embeddings. Université Paris-Saclay, 2021.](https://theses.hal.science/tel-03199801/document) <br>
-[6] [Yao, Z., Sun, Y., Ding, W., Rao, N., Xiong, H.: Dynamic word embeddings for evolving semantic discovery. In: Proceedings of the eleventh acm international conference on web search and data mining. Marina Del Rey, CA, USA, 2018. 673–681 pp.](Dynamic word embeddings for evolving semantic discovery. In: Proceedings of the eleventh acm international conference on web search and data mining. Marina Del Rey, CA, USA, 2018. 673–681 pp.) [Code](https://github.com/yifan0sun/DynamicWord2Vec)<br>
+[6] [Yao, Z., Sun, Y., Ding, W., Rao, N., Xiong, H.: Dynamic word embeddings for evolving semantic discovery. In: Proceedings of the eleventh acm international conference on web search and data mining. Marina Del Rey, CA, USA, 2018. 673–681 pp.](Dynamic word embeddings for evolving semantic discovery. In: Proceedings of the eleventh acm international conference on web search and data mining. Marina Del Rey, CA, USA, 2018. 673–681 pp.)<br>
+[Code](https://github.com/yifan0sun/DynamicWord2Vec)<br>
 
 
