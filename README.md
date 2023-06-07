@@ -27,12 +27,12 @@ The repository notebooks contains Colab notebooks with code and results of our w
 Here you can find the trained (or fine-tuned) models.<br>
 For the News corpus:
 [SGNS](https://drive.google.com/drive/folders/1IZ6GIDcCvmix7dLZRZHQ4SkjxxSPwfbC?usp=sharing),
-[Dynamic word embeddings model](https://drive.google.com/drive/folders/1KAkuRNKFN40FE6CIRQlwKp8WLYRY3JwR?usp=sharing),
+[Dynamic word embeddings model](https://drive.google.com/drive/folders/1KAkuRNKFN40FE6CIRQlwKp8WLYRY3JwR?usp=sharing), and 
 [BERT](https://drive.google.com/drive/folders/1NfuobbC-wFUZmonvmwSZF1F-8tCElQ-L?usp=sharing).<br>
 For the Social media corpus:
 [SGNS](https://drive.google.com/drive/folders/1IvE7_Met67r2A8oRUB02XNPV_ZeoIch9?usp=sharing),
-[Dynamic word embeddings model](https://drive.google.com/drive/folders/1ZGR3B4Dca7USzsg9vFoqHIkQQDuzQBdK?usp=sharing),
-[BERT](https://drive.google.com/drive/folders/1Xrm2Tz91pCcTfO7z8wz4E4towNXwSkP-?usp=sharing).<
+[Dynamic word embeddings model](https://drive.google.com/drive/folders/1ZGR3B4Dca7USzsg9vFoqHIkQQDuzQBdK?usp=sharing), and 
+[BERT](https://drive.google.com/drive/folders/1Xrm2Tz91pCcTfO7z8wz4E4towNXwSkP-?usp=sharing).
 
 ## Experimental setup
 We conduct two types of experiments: 1) discovering semantic shifts (for all the chosen models and for both datasets) and 2) classification task on detecting known shifts (for all the chosen models, but only for the News corpus). In the first task we aim at revealing semantic changes from the data and in the second task we analyze how well models can detect semantic shifts with the use of an annotated dataset.<br>
