@@ -5,12 +5,12 @@ This research is focused on discovering and detecting diachronic semantic shifts
   <li>static approach (Skip-gram with negative sampling model [4]),</li>
   <li>dynamic approach (Dynamic word embeddings model [6]) and </li> 
   <li>contextualized approach (BERT model [1]).</li></l> <br>
-<br>
-We use [ruBert-base](https://huggingface.co/ai-forever/ruBert-base) version of the BERT model.<br>
+
 We apply the indicated models to the News corpus and to the Social media corpus in order to reveal social, political, cultural, etc. changes through semantic changes that are assessed as the similarity (namely, cosine similarity) between embeddings of a word in different time slices (from 2000 to 2019 and from 2007 to 2019 correspondingly).<br>
 <br>
 We analyze the revealed changes and compare performance of the models on two tasks: 1) discovering semantic shifts and 2) detecting known shifts.<br>
-We use [ruBert-base](https://huggingface.co/ai-forever/ruBert-base) version of the BERT model.<br>
+We use 
+[ruBert-base](https://huggingface.co/ai-forever/ruBert-base) version of the BERT model.<br>
 [ruBert-base](https://huggingface.co/ai-forever/ruBert-base)
 
 ## Goal
