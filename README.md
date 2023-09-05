@@ -55,7 +55,7 @@ We conduct two types of experiments: 1) discovering semantic shifts (for all the
 </ol>
 
 ## Main results
-The file <i>Top-20 words with semantic shift</i> contains full tables that include top-20 words with the most considerable semantic shift for each of the datasets (according to the corresponding models) with cosine similarity measures, closest neighbors, and words' meanings that changed from one-time slice to another.
+The file [Top-20 words with semantic shift](https://github.com/VeronikaNikonova/hse_thesis/blob/main/Top-20%20words%20with%20semantic%20shift.xlsx) contains full tables that include top-20 words with the most considerable semantic shift for each of the datasets (according to the corresponding models) with cosine similarity measures, closest neighbors, and words' meanings that changed from one-time slice to another.
 
 The comparison of the performance of the three models on semantic shifts discovering and detecting tasks gave us the following results. The BERT model showed the best performance on the discovering task while SGNS showed better results on detecting known shifts task. Despite the fact that BERT is the most powerful model, it showed poorer performance on classification task. There may be several reasons for that: 
 <l>
