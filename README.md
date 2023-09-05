@@ -2,7 +2,7 @@
 
 This research is focused on discovering and detecting diachronic semantic shifts in the Russian language with the use of different word embedding models that represent different approaches: 
 <l>
-  <li>static approach (Skip-gram with negative sampling model [4]),</li>
+  <li>static approach (Word2vec, namely Skip-gram with negative sampling model [4]),</li>
   <li>dynamic approach (Dynamic word embeddings model [6]) and </li> 
   <li>contextualized approach (BERT model [1]).</li></l> <br>
 
@@ -21,27 +21,27 @@ The repository data contains news and social media datasets separated by year. T
 [News corpus](https://drive.google.com/file/d/1_lzshaBJ7Klm_7p1Mysg5uk_ovQB0IF9/view?usp=drive_link) and 
 [Social media corpus](https://drive.google.com/file/d/1nMPewEakzH_y80quUGVmRktz0Twcepf1/view?usp=drive_link)<br>
 <br>
-The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (SGNS, Dynamic word embeddings model and BERT). <br>
+The repository notebooks contains Colab notebooks with code and results of our work separated into 3 groups: news and social media (for the discovering task) and classification (for the detection task). In each group there are 3 notebooks, 1 per each model (Word2vec, Dynamic word embeddings model and BERT). <br>
 
 ## Models
 Here you can find the trained (or fine-tuned) models.<br>
 For the News corpus:
-[SGNS](https://drive.google.com/drive/folders/1IZ6GIDcCvmix7dLZRZHQ4SkjxxSPwfbC?usp=sharing),
+[Word2vec](https://drive.google.com/drive/folders/1IZ6GIDcCvmix7dLZRZHQ4SkjxxSPwfbC?usp=sharing),
 [Dynamic word embeddings model](https://drive.google.com/drive/folders/1KAkuRNKFN40FE6CIRQlwKp8WLYRY3JwR?usp=sharing), and 
 [BERT](https://drive.google.com/drive/folders/1NfuobbC-wFUZmonvmwSZF1F-8tCElQ-L?usp=sharing).<br>
 For the Social media corpus:
-[SGNS](https://drive.google.com/drive/folders/1IvE7_Met67r2A8oRUB02XNPV_ZeoIch9?usp=sharing),
+[Word2vec](https://drive.google.com/drive/folders/1IvE7_Met67r2A8oRUB02XNPV_ZeoIch9?usp=sharing),
 [Dynamic word embeddings model](https://drive.google.com/drive/folders/1ZGR3B4Dca7USzsg9vFoqHIkQQDuzQBdK?usp=sharing), and 
 [BERT](https://drive.google.com/drive/folders/1Xrm2Tz91pCcTfO7z8wz4E4towNXwSkP-?usp=sharing).
 
 ## Experimental setup
-We conduct two types of experiments: 1) discovering semantic shifts (for all the chosen models and for both datasets) and 2) classification task on detecting known shifts (for all the chosen models, but only for the News corpus). In the first task we aim at revealing semantic changes from the data and in the second task we analyze how well models can detect semantic shifts with the use of an annotated dataset.<br>
+We conduct two series of experiments: 1) main experiments on discovering semantic shifts aimed at revealing semantic changes in language; 2) an additional series of experiments on diachronic semantic shift detection to analyze how well models can detect semantic shifts and compare their performance.<br>
 
 #### For discovering semantic shifts task we use the following Pipeline:
 <ol>
-<li> Train (of fine-tune) embeddings model on our data. </li>
-<li> Align the embeddings and reduce them to the 2019 vector space (only for SGNS). </li>
-<li> Calculate the cosine similarity measure for each of the eligible words (occurrence at least 50 times for the News corpus and 10 times for the Social media corpus and present in the corresponding time periods) for word embeddings of 2000 and 2019 years (for BERT we use word prototype embeddings: averaged embeddings of all the occurrences of the eligible words in the appropriate year). </li>
+<li> Train (of fine-tune) embedding model on the training data (for BERT transform token embeddings into word embeddings) </li>
+<li> Align embeddings and reduce them to the 2019 vector space (only for Word2vec). </li>
+<li> Calculate cosine similarity for each of the eligible words (occurrence at least 50 times for the News corpus and 10 times for the Social media corpus and present in the corresponding periods) for word embeddings of 2000 (2007 for the Social media dataset) and 2019 years (for BERT, we use word prototype embeddings: averaged embeddings of all the occurrences of the eligible words in the appropriate year). </li>
 <li> Obtain top 20 words with the lowest cosine similarity between these time periods (meaning that the semantic shift for these words in the time period is the highest). </li>
 <li> Analyze the revealed semantic shifts in terms of their validity and actuality: for each of the words we find the closest neighbors in order to understand the context in which they are used in each period and make the decision on presence/ absence of semantic shift.</li>
 </ol>
@@ -57,7 +57,7 @@ We conduct two types of experiments: 1) discovering semantic shifts (for all the
 ## Main results
 The file [Top-20 words with semantic shift](https://github.com/VeronikaNikonova/hse_thesis/blob/main/Top-20%20words%20with%20semantic%20shift.xlsx) contains full tables that include top-20 words with the most considerable semantic shift for each of the datasets (according to the corresponding models) with cosine similarity measures, closest neighbors, and words' meanings that changed from one-time slice to another.
 
-The comparison of the performance of the three models on semantic shifts discovering and detecting tasks gave us the following results. The BERT model showed the best performance on the discovering task while SGNS showed better results on detecting known shifts task. Despite the fact that BERT is the most powerful model, it showed poorer performance on classification task. There may be several reasons for that: 
+The comparison of the performance of the three models on semantic shifts discovering and detecting tasks gave us the following results. The BERT model showed the best performance on the discovering task while Word2vec showed better results on detecting known shifts task. Despite the fact that BERT is the most powerful model, it showed poorer performance on classification task. There may be several reasons for that: 
 <l>
 <li> As it was noticed in [5], contextualized models, like BERT, show state-of-the-art performance in detecting semantic shifts for high-polysemy words, while for low-polysemy words the performance of such models drops considerably, demonstrating poorer results in comparison with word2vec models, and in our dataset there are a lot of low-polysemy words. </li>
 <li> In our research we used averaged word embeddings for each of the occurrences of a word during corresponding year in order to obtain one word embedding per each word in each time slice, because it is computationally efficient and this technique showed good performance in [3]. However, in [5] averaging showed worse performance than clustering of word embeddings and even underperformed word2vec model in a bilingual semantic change task. Thus, using clustering technique instead of averaging for the purpose of our classification task could have yielded better results. </li>
