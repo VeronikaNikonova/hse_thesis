@@ -1,4 +1,4 @@
-# Discovering semantic shifts in the Russian language in news and social media using word embedding models
+# Static, dynamic, or contextualized: what is the best approach for discovering semantic shifts in Russian media?
 
 This research is focused on discovering and detecting diachronic semantic shifts in the Russian language with the use of different word embedding models that represent different approaches: 
 <l>
